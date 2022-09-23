@@ -1,5 +1,5 @@
 public class PC {
-    private  Case theCase;
+    private Case theCase;
     private Monitor monitor;
     private MotherBoard motherBoard;
 
@@ -9,15 +9,13 @@ public class PC {
         this.motherBoard = motherBoard;
     }
 
-    public Case getTheCase() {
-        return theCase;
+    public void powerUp() {
+        theCase.pressPowerButton();
+        drawLogo();
     }
 
-    public Monitor getMonitor() {
-        return monitor;
+    private void drawLogo() {
+        monitor.drawPixelAt(1200, 50, "yellow");
     }
 
-    public MotherBoard getMotherBoard() {
-        return motherBoard;
-    }
 }
